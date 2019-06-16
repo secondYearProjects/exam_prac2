@@ -24,10 +24,20 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    postaladdress.cpp \
+    slcircularlist.cpp \
+    hashtable.cpp \
+    linkedlist.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    postaladdress.h \
+    slcircularlist.h \
+    bplustree.h \
+    avltree.h \
+    hashtable.h \
+    linkedlist.h
 
 FORMS += \
         mainwindow.ui

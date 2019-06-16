@@ -1,6 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <postaladdress.h>
+#include <slcircularlist.h>
+#include <bplustree.h>
+#include <avltree.h>
+#include <hashtable.h>
+
 #include <QMainWindow>
 
 namespace Ui {
