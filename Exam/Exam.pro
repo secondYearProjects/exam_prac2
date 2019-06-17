@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += core gui widgets testlib
 
 TARGET = Exam
 TEMPLATE = app
@@ -20,7 +20,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-CONFIG += c++11
+CONFIG += c++11 console
 
 SOURCES += \
         main.cpp \
@@ -28,7 +28,8 @@ SOURCES += \
     postaladdress.cpp \
     slcircularlist.cpp \
     hashtable.cpp \
-    linkedlist.cpp
+    linkedlist.cpp \
+    test.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -37,7 +38,9 @@ HEADERS += \
     bplustree.h \
     avltree.h \
     hashtable.h \
-    linkedlist.h
+    linkedlist.h \
+    sorts.h \
+    test.h
 
 FORMS += \
         mainwindow.ui

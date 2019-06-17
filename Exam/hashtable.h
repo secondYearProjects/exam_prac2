@@ -1,13 +1,3 @@
-//*****************************************************************
-//  HashTable.h
-//  HashTable
-//
-//  Created by Karlina Beringer on June 18, 2014.
-//
-//  This header file contains the Hash Table class declaration.
-//  Hash Table array elements consist of Linked List objects.
-//*****************************************************************
-
 #ifndef HashTable_h
 #define HashTable_h
 
@@ -16,9 +6,6 @@
 #include <string>
 using std::string;
 
-//*****************************************************************
-// Hash Table objects store a fixed number of Linked Lists.
-//*****************************************************************
 class HashTable
 {
 private:
@@ -66,10 +53,6 @@ public:
 };
 
 #endif
-
-//*****************************************************************
-// End of File
-//*****************************************************************
 
 
 

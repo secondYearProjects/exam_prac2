@@ -1,13 +1,3 @@
-//*****************************************************************
-//  LinkedList.h
-//  HashTable
-//
-//  Created by Karlina Beringer on June 16, 2014.
-//
-//  This header file contains the Linked List class declaration.
-//  Hash Table array elements consist of Linked List objects.
-//*****************************************************************
-
 #ifndef LinkedList_h
 #define LinkedList_h
 
@@ -16,18 +6,12 @@
 using std::string;
 using std::cout;
 
-//*****************************************************************
-// List items are keys with pointers to the next item.
-//*****************************************************************
 struct Item
 {
     string key;
     Item * next;
 };
 
-//*****************************************************************
-// Linked lists store a variable number of items.
-//*****************************************************************
 class LinkedList
 {
 private:
@@ -65,8 +49,4 @@ public:
 };
 
 #endif
-
-//*****************************************************************
-// End of File
-//*****************************************************************
 

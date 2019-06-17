@@ -6,6 +6,7 @@
 #include <bplustree.h>
 #include <avltree.h>
 #include <hashtable.h>
+#include <sorts.h>
 
 #include <QMainWindow>
 
