@@ -12,3 +12,23 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::addListItem()
+{
+
+}
+
+void MainWindow::addTreeItem()
+{
+
+}
+
+void MainWindow::addHashItem()
+{
+
+}
+
+void MainWindow::addSortItem()
+{
+
+}

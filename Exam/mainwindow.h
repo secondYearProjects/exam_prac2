@@ -24,6 +24,17 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    SLCircularList<std::string> listObj;
+    //BPlusTree<std::string, PostalAddress> treeObj(3);
+    HashTable hashObj;
+    std::vector<std::string> sortObj;
+
+public slots:
+    void addListItem();
+    void addTreeItem();
+    void addHashItem();
+    void addSortItem();
 };
 
 #endif // MAINWINDOW_H

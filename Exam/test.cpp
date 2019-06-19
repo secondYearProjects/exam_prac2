@@ -5,6 +5,10 @@
 
 #include "sorts.h"
 #include "postaladdress.h"
+#include "slcircularlist.h"
+#include "bplustree.h"
+#include "avltree.h"
+
 
 bool isSorted(std::vector<PostalAddress> &v){
     for (size_t i=1;i<v.size();i++){
@@ -12,6 +16,22 @@ bool isSorted(std::vector<PostalAddress> &v){
             return false;
     }
     return true;
+}
+
+void TestMain::listTest()
+{
+    std::vector<int> v = {5,3,0,-1,2,0};
+    SLCircularList<int> lst;
+    for (auto el: v)
+        lst.add(el);
+
+    //SLLIterator<Node<int>> ::iterator a(lst.begin());
+    //QCOMPARE(5, *a);
+}
+
+void TestMain::treeTest()
+{
+
 }
 
 void TestMain::insertSortTest()
