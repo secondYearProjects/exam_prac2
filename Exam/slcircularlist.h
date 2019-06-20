@@ -2,6 +2,8 @@
 #define SLCIRCULARLIST_H
 
 #include <iterator>
+#include <algorithm>
+#include "tovector.h"
 
 template<typename ValueType>
 class SLLIterator;
@@ -18,7 +20,7 @@ struct Node
 };
 
 template <typename T>
-class SLCircularList
+    class SLCircularList: public ToVector<T>
 {
 public:
     SLCircularList() {}
@@ -38,20 +40,53 @@ public:
         auto newNode = new Node<T>(val);
         if (first == nullptr) {
             first = newNode;
-            first->next = newNode;
-            last = newNode;
-            last->next = newNode;
+            first->next = nullptr;
+            return;
         }
 
         auto prevFirst = first;
         first = newNode;
-        last->next = nullptr;
         first->next = prevFirst;
+    }
+
+    void del(T val){
+        auto v = toVector();
+        std::reverse(v.begin(),v.end());
+        clear();
+        bool found = false;
+        for (auto el:v){
+            if (val != el || found){
+                add(el);
+            }
+            else
+                found = true;
+        }
+    }
+
+    void clear() {
+        auto curr = first;
+        first = nullptr;
+        while(curr){
+            auto toDel = curr;
+            curr= curr->next;
+            delete toDel;
+        }
+    }
+
+    std::vector<T> toVector() const{
+        std::vector<T> res;
+        auto curr = first;
+        if (curr == nullptr)
+            return res;
+        while(curr != nullptr){
+            res.push_back(curr->Data);
+            curr = curr->next;
+        }
+        return res;
     }
 
 private:
     Node<T> *first = nullptr;
-    Node<T> *last = nullptr;
 };
 
 

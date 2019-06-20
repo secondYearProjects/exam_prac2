@@ -8,7 +8,10 @@
 #include <hashtable.h>
 #include <sorts.h>
 
+#include <functional>
+
 #include <QMainWindow>
+#include <QListWidget>
 
 namespace Ui {
 class MainWindow;
@@ -30,11 +33,17 @@ private:
     HashTable hashObj;
     std::vector<std::string> sortObj;
 
+
+    void updateWidget(QListWidget *widget, std::vector<std::string> values);
+
 public slots:
     void addListItem();
     void addTreeItem();
     void addHashItem();
     void addSortItem();
+private slots:
+    void on_AddButtonList_clicked();
+    void on_DeleteButtonList_clicked();
 };
 
 #endif // MAINWINDOW_H

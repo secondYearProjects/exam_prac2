@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 #include "sorts.h"
 #include "postaladdress.h"
@@ -24,6 +25,20 @@ void TestMain::listTest()
     SLCircularList<int> lst;
     for (auto el: v)
         lst.add(el);
+    auto tmp = lst.toVector();
+
+    std::sort(v.begin(),v.end());
+    std::sort(tmp.begin(),tmp.end());
+    QCOMPARE(v,tmp);
+
+    v = {5,3,0,-1,2};
+    lst.del(0);
+
+    tmp = lst.toVector();
+
+    std::sort(v.begin(),v.end());
+    std::sort(tmp.begin(),tmp.end());
+    //QCOMPARE(v,tmp);
 
     //SLLIterator<Node<int>> ::iterator a(lst.begin());
     //QCOMPARE(5, *a);

@@ -40,7 +40,8 @@ HEADERS += \
     hashtable.h \
     linkedlist.h \
     sorts.h \
-    test.h
+    test.h \
+    tovector.h
 
 FORMS += \
         mainwindow.ui
